@@ -1,0 +1,353 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  height: 50px;
+  background-color: #f084bf;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  height: 40px;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 10px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f53f12;
+}
+
+.anchor-offset {
+  scroll-margin-top: 20px;
+}
+
+/* Hero Section */
+section#hero {
+  background: url('images/hero-bg.jpg') center center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+section#hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 42, 56, 0.7);
+  z-index: 1;
+}
+
+section#hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+/* Sections */
+section {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1e2a38;
+}
+
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+/* Cards for Services */
+section#wedding,
+section#prewedding,
+section#event {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section#wedding img,
+section#prewedding img,
+section#event img {
+  border-radius: 12px;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+section#wedding img:hover,
+section#prewedding img:hover,
+section#event img:hover {
+  transform: scale(1.05);
+}
+
+/* Forms */
+form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  max-width: 450px;
+  margin: 20px auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea, select {
+  padding: 12px 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #ff7e00;
+  outline: none;
+}
+
+button {
+  background-color: #ff7e00;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e26a00;
+}
+
+/* Social Media Sidebar */
+.social-media-fixed.right {
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 9999;
+}
+
+.social-media-fixed.right a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-media-fixed.right a:hover img {
+  transform: scale(1.2);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* Rating Section */
+.rating-form {
+  text-align: center;
+  margin: 30px auto;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emoji-rating span {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.emoji-rating span:hover,
+.emoji-rating span.selected {
+  transform: scale(1.3);
+}
+
+/* Footer */
+footer {
+  background-color: #1e2a38;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  height: 50px;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+footer a img {
+  width: 36px;
+  height: 36px;
+  margin: 0 10px;
+  filter: brightness(90%);
+  transition: filter 0.3s ease;
+}
+
+footer a:hover img {
+  filter: brightness(120%);
+}
+
+/* Form Message (Success) */
+.form-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  z-index: 10000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ---------------------- */
+/* RESPONSIVE BREAKPOINTS */
+/* ---------------------- */
+
+/* Tablet & below */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo {
+    height: 35px;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+  section#wedding,
+  section#prewedding,
+  section#event {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-media-fixed.right {
+    right: 5px;
+    bottom: 20px;
+    top: auto;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 500px) {
+  form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  input, textarea, select {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  section#hero h1 {
+    font-size: 2rem;
+  }
+}
