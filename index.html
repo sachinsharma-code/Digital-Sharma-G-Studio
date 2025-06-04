@@ -1,0 +1,157 @@
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Digital Sharma G Studio - Wedding, Pre-wedding & Event Photography">
+  <meta name="keywords" content="photo studio, wedding photography, event photography, Digital Sharma G Studio">
+  <meta name="author" content="Digital Sharma G Studio">
+  <title>Digital Sharma G Studio</title>
+  
+  <link rel="stylesheet" href="style.css">
+
+  <script defer src="scripts.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Digital Sharma G Studio Logo" class="logo">
+    <!-- <img src="C:\Users\Intel\Desktop\work\studio\img\logo.png" alt="Digital Sharma G Studio Logo" class="logo"> -->
+    <nav>
+      <ul>
+        <li><a href="#wedding">Wedding</a></li>
+        <li><a href="#prewedding">Pre-wedding</a></li>
+        <li><a href="#event">Event</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="wedding" class="anchor-offset">
+    <h2>Wedding Photography</h2>
+    <a href="https://en.wikipedia.org/wiki/Wedding" target="_blank" title="Wedding">
+       <img src="img/wedding.jpeg" alt="Wedding Photos">
+       <!-- <img src="C:\Users\Intel\Desktop\work\studio\img\wedding.jpeg" alt="Wedding Photos"> -->
+    </a>
+  </section>
+  
+  <section id="prewedding" class="anchor-offset">
+    <h2>Pre-wedding Shoots</h2>
+    <a href="https://en.wikipedia.org/wiki/City_Park,_Jaipur" target="_blank" title="pre-Wedding">
+      <img src="img/prewedding.jpeg" alt="Pre-wedding Shoots">       
+      <!-- <img src="C:\Users\Intel\Desktop\work\studio\img\prewedding.jpeg" alt="Pre-wedding Shoots">        -->
+    </a>
+  </section>
+  
+  <section id="event" class="anchor-offset">
+    <h2>Event Coverage</h2>
+    <a href="https://en.wikipedia.org/wiki/Event_photography" target="_blank" title="Event_photography">
+      <img src="img/event.jpeg" alt="Event Coverage">
+      <!-- <img src="C:\Users\Intel\Desktop\work\studio\img\event.jpeg" alt="Event Coverage"> -->
+    </a>
+  </section>
+
+  <section id="contact" class="anchor-offset">
+
+    <!-- QUERY FORM -->
+    <h2>Contact Us</h2>
+    <form action="query.php" method="POST">
+      <label for="qname">Name <span class="required">*</span></label>
+      <input type="text" id="qname" name="name" required>
+
+      <label for="qemail">Email <span class="required">*</span></label>
+      <input type="email" id="qemail" name="email" required>
+
+      <label for="qmessage">Message <span class="required">*</span></label>
+      <textarea id="qmessage" name="message" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+
+
+
+      <!-- BOOKING FORM -->
+    <form action="booking.php" method="POST">
+      <label for="bname">Name <span class="required">*</span></label>
+      <input type="text" id="bname" name="name" required>
+
+      <label for="bemail">Email <span class="required">*</span></label>
+      <input type="email" id="bemail" name="email" required>
+
+      <label for="bmobile">Mobile Number <span class="required">*</span></label>
+      <input type="tel" id="bmobile" name="mobile" pattern="[0-9]{10}" required>
+
+      <label for="baddress">Address <span class="required">*</span></label>
+      <input type="text" id="baddress" name="address" required>
+
+      <label for="bdate">Date <span class="required">*</span></label>
+      <input type="date" id="bdate" name="date" required>
+
+      <label for="bservice">Service <span class="required">*</span></label>
+      <select id="bservice" name="service" required>
+        <option value="" disabled selected>Select Service</option>
+        <option value="wedding">Wedding</option>
+        <option value="prewedding">Pre-wedding</option>
+        <option value="event">Event</option>
+      </select>
+
+      <label for="bdescription">Description</label>
+      <textarea id="bdescription" name="description"></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+
+
+  </section>
+  <section id="rating">
+  <h2>Rate Our Services</h2>
+  <form action="rating.php" method="POST" class="rating-form">
+    <input type="hidden" name="rating" id="ratingInput" required>
+    <div class="emoji-rating">
+      <span data-value="1" title="Very Bad">😡</span>
+      <span data-value="2" title="Bad">😕</span>
+      <span data-value="3" title="Okay">🙂</span>
+      <span data-value="4" title="Good">😃</span>
+      <span data-value="5" title="Excellent">🤩</span>
+    </div>
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="comment" placeholder="Your Feedback"></textarea>
+    <button type="submit">Submit Rating</button>
+  </form>
+</section>
+
+    <div class="social-media-fixed right">
+      <a href="https://www.instagram.com/the__sharma__g" target="_blank" title="Instagram">
+            <img src="img/Instagram.png" alt="Instagram" />
+            <!-- <img src="C:\Users\Intel\Desktop\work\icon\Instagram.png" alt="Instagram" /> -->
+      </a>
+      <a href="https://www.facebook.com/share/15drNJQEgv/" target="_blank" title="Facebook">
+            <img src="img/Facebook.png" alt="Facebook" />
+            <!-- <img src="C:\Users\Intel\Desktop\work\icon\Facebook.png" alt="Facebook" /> -->
+      </a>
+      <a href="https://x.com/the_sharma_g" target="_blank" title="X">
+            <img src="img/x.png" alt="x" />
+            <!-- <img src="C:\Users\Intel\Desktop\work\icon\x.png" alt="x" /> -->
+      </a>
+    </div> 
+
+<footer>
+  <p>&copy; 2025 Digital Sharma G Studio. All rights reserved.</p> 
+</footer>
+
+<div id="formMessage" class="form-message" style="display:none;"></div>
+
+   
+</body>
+</html>
